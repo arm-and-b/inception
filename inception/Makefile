@@ -17,7 +17,7 @@ fclean: clean
 	@sudo rm -rf ${DATA}
 	@sudo docker system prune -af
 
-re: clean all
+re: fclean all
 
 .PHONY: all stop clean fclean re
 .SILENT: all stop clean fclean re
