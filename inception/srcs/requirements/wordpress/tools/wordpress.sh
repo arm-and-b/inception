@@ -1,13 +1,13 @@
 #!/bin/sh
 
-sleep 1
+sleep 10
 
 if [ -f /var/www/wordpress/wp-config.php ];
 then
 	echo "WP INSTALLED";
 else
 	wp core download --allow-root
-	
+
   	wp config create --dbname="${MYSQL_DATABASE}" --dbuser="${MYSQL_USER}" --dbpass="${MYSQL_PASSWORD}" --dbhost=mariadb:3306 --allow-root
   	sleep 5
 
